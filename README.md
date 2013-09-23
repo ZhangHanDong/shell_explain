@@ -30,6 +30,12 @@ $ explain "iptables -A INPUT -i eth0 -s ip-to-block -j DROP"
 $ explain "git log --graph --abbrev-commit --pretty=oneline origin..mybranch"
 ```
 
+## Screenshot
+
+![alt tag](https://github.com/ZhangHanDong/shell_explain/public/img/explain_shell1.png)
+![alt tag](https://github.com/ZhangHanDong/shell_explain/public/img/explain_shell2.png)
+
+
 ## Contributing
 
 1. Fork it
