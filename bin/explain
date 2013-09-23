@@ -39,13 +39,12 @@ puts ("+"*20)+"Explain Shell"+("+"*20)
 
 puts "invalid command".ansi(:red) if @results.empty?
 @results.each do |re|
-
-	cmd_name = @commands.each_pair do|pair|
+  cmd_name = @commands.each_pair do|pair|
     puts pair[0].ansi(:red) if pair.include?(re[0])
-	end
-
-	puts re[1].ansi(:yellow)
-	puts ("+"*50).ansi(:green)
+  end
+  
+  puts re[1].ansi(:yellow)
+  puts ("+"*50).ansi(:green)
 end
 
 
