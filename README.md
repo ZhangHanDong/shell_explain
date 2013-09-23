@@ -21,12 +21,12 @@ Or install it yourself as:
 ## Usage
 
 ```sh
-$ explain find . -type f -print0
-$ explain ssh -i keyfile -f -N -L 1234:www.google.com:80 host
-$ explain lsof -c python -u user
-$ explain mysql -u root -p -h 192.168.1.2
-$ explain iptables -A INPUT -i eth0 -s ip-to-block -j DROP
-$ explain git log --graph --abbrev-commit --pretty=oneline origin..mybranch
+$ explain "find . -type f -print0"
+$ explain "ssh -i keyfile -f -N -L 1234:www.google.com:80 host"
+$ explain "lsof -c python -u user"
+$ explain "mysql -u root -p -h 192.168.1.2"
+$ explain "iptables -A INPUT -i eth0 -s ip-to-block -j DROP"
+$ explain "git log --graph --abbrev-commit --pretty=oneline origin..mybranch"
 ```
 
 ## Contributing
