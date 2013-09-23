@@ -1,6 +1,6 @@
 # ShellExplain
 
-  explain shell means from your command line.
+  **Explain shell input from your command line.**
 
   Thanks http://explainshell.com/
 
