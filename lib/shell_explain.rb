@@ -14,9 +14,11 @@ module ShellExplain
     	 Nokogiri::HTML(html)
      end
 
+     #{command: help-num}
      def get_command(doc)
-       doc.xpath("//span[@helpref]").inject([]) do|cmds, node|
-         cmds << node.text
+       doc.xpath("//span[@helpref]").inject({}) do|cmds, node|
+         cmds[node.text] = node.attributes["helpref"].value
+         cmds
        end
      end
 

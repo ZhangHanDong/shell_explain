@@ -16,10 +16,17 @@ def run(pbar)
   puts "get explain data".ansi(:green)
   pbar.inc
   doc = ShellExplain::Site.get_data(@cmd)
-  commands = ShellExplain::Site.get_command(doc).uniq
-  explains = ShellExplain::Site.get_explain(doc)
+  #commands format: {command: help-num}
+  @commands = ShellExplain::Site.get_command(doc)
+  @explains = ShellExplain::Site.get_explain(doc)
 
-  @results = commands.zip(explains)
+  combination = @commands.values.zip(@explains)
+
+  @results = combination.inject({}) do|h, node|
+    h[node[0]] = node[1] unless h.has_key?(node[0])
+    h
+  end
+
   pbar.finish
 end
 
@@ -32,9 +39,13 @@ puts ("+"*20)+"Explain Shell"+("+"*20)
 
 puts "invalid command".ansi(:red) if @results.empty?
 @results.each do |re|
-	puts "#{re[0]}".ansi(:red)
-	puts ("-"*50).ansi(:green)
+
+	cmd_name = @commands.each_pair do|pair|
+    puts pair[0].ansi(:red) if pair.include?(re[0])
+	end
+
 	puts re[1].ansi(:yellow)
+	puts ("+"*50).ansi(:green)
 end
 
 

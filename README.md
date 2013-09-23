@@ -21,6 +21,7 @@ Or install it yourself as:
 ## Usage
 
 ```sh
+$ explain "true && { echo success; } || { echo failed; }"
 $ explain "find . -type f -print0"
 $ explain "ssh -i keyfile -f -N -L 1234:www.google.com:80 host"
 $ explain "lsof -c python -u user"
