@@ -1,0 +1,42 @@
+#!/usr/bin/env ruby
+
+require 'ansi'
+require 'ansi/core'
+require 'ansi/logger'
+require 'ansi/progressbar'
+
+
+# example:
+# $ explain "cut -d ' ' -f 1 /var/log/apache2/access_logs | uniq -c | sort -n"
+
+# get cmd
+cmd = ARGV[0]
+
+
+#progress bar
+pbar = ANSI::Progressbar.new("Test Bar", 100)
+
+def run(pbar)
+  puts "get explain data".ansi(:green)
+
+  doc = ShellExplain.get_data(cmd)
+  commands = ShellExplain.get_command(doc)
+  explains = ShellExplain.get_explain(doc)
+
+  results = commands.zip(explains)
+  pbar.finish
+end
+
+pbar.transfer_mode
+run(pbar)
+
+
+# input results
+log = ANSI::Logger.new(STDOUT)
+results.each do |re|
+	log.info{"#{re[0]}.ansi(:red)"}
+	puts "-"*50.ansi(:green)
+	puts re[1].ansi(:green)
+end
+
+
