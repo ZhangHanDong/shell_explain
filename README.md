@@ -29,6 +29,13 @@ $ explain "mysql -u root -p -h 192.168.1.2"
 $ explain "iptables -A INPUT -i eth0 -s ip-to-block -j DROP"
 $ explain "git log --graph --abbrev-commit --pretty=oneline origin..mybranch"
 ```
+**change explain text color:**
+color depend on 'ansi'
+
+```sh
+$ explain "true && { echo success; } || { echo failed; }" "green"
+```
+
 
 ## Screenshots
 

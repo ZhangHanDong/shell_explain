@@ -8,6 +8,7 @@ require 'ansi/progressbar'
 
 # get cmd
 @cmd = ARGV[0]
+@explain_color = ARGV[1].nil? ? :yellow : ARGV[1]
 
 #progress bar
 pbar = ANSI::Progressbar.new("Test Bar", 100)
@@ -42,8 +43,8 @@ puts "invalid command".ansi(:red) if @results.empty?
   cmd_name = @commands.each_pair do|pair|
     puts pair[0].ansi(:red) if pair.include?(re[0])
   end
-  
-  puts re[1].ansi(:yellow)
+
+  puts re[1].ansi(@explain_color.to_sym)
   puts ("+"*50).ansi(:green)
 end
 
