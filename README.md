@@ -38,8 +38,10 @@ $ explain "true && { echo success; } || { echo failed; }" "green"
 
 
 ## Screenshots
-
+[1]click
 ![alt tag](https://github.com/ZhangHanDong/shell_explain/blob/master/public/img/explain_shell1.png)
+
+[2]click
 ![alt tag](https://github.com/ZhangHanDong/shell_explain/blob/master/public/img/explain_shell2.png)
 
 
