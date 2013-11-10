@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Shell explain by ZhangHanDong</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Shell explain</h1>
+        <p class="header">wrapped up http://explainshell.com input from terminal</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/ZhangHanDong/shell_explain/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/ZhangHanDong/shell_explain/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/ZhangHanDong/shell_explain">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/ZhangHanDong">ZhangHanDong</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a name="shellexplain" class="anchor" href="#shellexplain"><span class="octicon octicon-link"></span></a>ShellExplain</h1>
+
+<p><strong>Explain shell input from your command line.</strong></p>
+
+<p>Thanks <a href="http://explainshell.com/">http://explainshell.com/</a></p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Add this line to your application's Gemfile:</p>
+
+<pre><code>gem 'shell_explain'
+</code></pre>
+
+<p>And then execute:</p>
+
+<pre><code>$ bundle
+</code></pre>
+
+<p>Or install it yourself as:</p>
+
+<pre><code>$ gem install shell_explain
+</code></pre>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<div class="highlight highlight-sh"><pre><span class="nv">$ </span>explain <span class="s2">"true &amp;&amp; { echo success; } || { echo failed; }"</span>
+<span class="nv">$ </span>explain <span class="s2">"find . -type f -print0"</span>
+<span class="nv">$ </span>explain <span class="s2">"ssh -i keyfile -f -N -L 1234:www.google.com:80 host"</span>
+<span class="nv">$ </span>explain <span class="s2">"lsof -c python -u user"</span>
+<span class="nv">$ </span>explain <span class="s2">"mysql -u root -p -h 192.168.1.2"</span>
+<span class="nv">$ </span>explain <span class="s2">"iptables -A INPUT -i eth0 -s ip-to-block -j DROP"</span>
+<span class="nv">$ </span>explain <span class="s2">"git log --graph --abbrev-commit --pretty=oneline origin..mybranch"</span>
+</pre></div>
+
+<p><strong>change explain text color:</strong>
+color depend on 'ansi'</p>
+
+<div class="highlight highlight-sh"><pre><span class="nv">$ </span>explain <span class="s2">"true &amp;&amp; { echo success; } || { echo failed; }"</span> <span class="s2">"green"</span>
+</pre></div>
+
+<h2>
+<a name="screenshots" class="anchor" href="#screenshots"><span class="octicon octicon-link"></span></a>Screenshots</h2>
+
+<p><img src="https://raw.github.com/ZhangHanDong/shell_explain/master/img/explain_shell1.png" alt="explain_shell1"></p>
+
+<p><img src="https://raw.github.com/ZhangHanDong/shell_explain/master/img/explain_shell2.png" alt="explain_shell2"></p>
+
+<h2>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<ol>
+<li>Fork it</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create new Pull Request</li>
+</ol>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
