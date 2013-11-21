@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["blackanger.z@gmail.com"]
   spec.description   = %q{explainshell.com input from terminal}
   spec.summary       = %q{explainshell.com for terminal}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/ZhangHanDong/shell_explain"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
