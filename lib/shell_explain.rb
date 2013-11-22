@@ -2,7 +2,7 @@ require "shell_explain/version"
 require 'net/http'
 require 'nokogiri'
 require 'cgi'
-require "my_maclloc"
+require "my_malloc"
 
 module ShellExplain
 
