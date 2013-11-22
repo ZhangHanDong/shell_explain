@@ -2,7 +2,7 @@ require "shell_explain/version"
 require 'net/http'
 require 'nokogiri'
 require 'cgi'
-
+require 'shell_explain/shell_explain'
 
 module ShellExplain
   class Site

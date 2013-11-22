@@ -1,1 +1,0 @@
-require "my_test/my_test"

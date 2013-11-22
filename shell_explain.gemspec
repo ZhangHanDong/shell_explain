@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/ZhangHanDong/shell_explain"
   spec.license       = "MIT"
 
-  spec.extensions    = %w[ext/my_test/extconf.rb]
+  spec.extensions    = %w[ext/shell_explain/extconf.rb]
   spec.files         = `git ls-files`.split($/)
   spec.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
