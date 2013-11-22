@@ -7,7 +7,7 @@ require "my_malloc"
 module ShellExplain
 
   class Site
-    include MyMalloc
+
     class << self
       def get_data(cmd)
         explain_shell_url = "http://explainshell.com/explain?cmd="
