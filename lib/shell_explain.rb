@@ -2,9 +2,10 @@ require "shell_explain/version"
 require 'net/http'
 require 'nokogiri'
 require 'cgi'
-require 'shell_explain/shell_explain'
+require 'my_test/my_test'
 
 module ShellExplain
+  include MyTest
   class Site
 
     class << self
