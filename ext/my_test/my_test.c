@@ -4,13 +4,13 @@
 VALUE MyTest = Qnil;
 
 // Prototype for the initialization method - Ruby calls this, not you
-void Init_mytest();
+void Init_my_test();
 
 // Prototype for our method 'test1' - methods are prefixed by 'method_' here
 VALUE method_test1(VALUE self);
 
 // The initialization method for this module
-void Init_mytest() {
+void Init_my_test() {
     MyTest = rb_define_module("MyTest");
     rb_define_method(MyTest, "test1", method_test1, 0);
 }
