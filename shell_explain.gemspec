@@ -14,6 +14,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/ZhangHanDong/shell_explain"
   spec.license       = "MIT"
 
+  spec.extensions    = %w[ext/my_test/extconf.rb]
   spec.files         = `git ls-files`.split($/)
   spec.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
@@ -22,6 +23,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "ansi"
   spec.add_dependency "nokogiri"
 
+  spec.add_development_dependency "rake-compiler"
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
 end
