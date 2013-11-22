@@ -2,12 +2,12 @@ require "shell_explain/version"
 require 'net/http'
 require 'nokogiri'
 require 'cgi'
-require "my_test"
+require "my_maclloc"
 
 module ShellExplain
 
   class Site
-    include MyTest
+    include MyMalloc
     class << self
       def get_data(cmd)
         explain_shell_url = "http://explainshell.com/explain?cmd="

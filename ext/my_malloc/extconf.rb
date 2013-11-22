@@ -3,6 +3,6 @@ require 'mkmf'
 
 
 # Now we create the Makefile that will install the extension as
-# lib/my_test/my_test.so.
+# lib/my_malloc/my_malloc.so.
 
-create_makefile 'my_test/my_test'
+create_makefile 'my_malloc/my_malloc'
