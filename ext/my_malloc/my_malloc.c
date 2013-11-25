@@ -7,3 +7,7 @@ Init_my_malloc()
 {
     rb_cMyMalloc = rb_define_class("MyMalloc", rb_cObject);
 }
+
+//
+// class MyMalloc # < Object
+// end
